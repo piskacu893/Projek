@@ -1,33 +1,24 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import './nav.css';
+import logo from '../img/Desain_tanpa_judul__1_-removebg-preview.png'; 
 
-const Navigation = () => {
+const Header = () => {
   return (
-    <nav className="sticky z-10 bg-green-800">
-      <ul className="flex items-center justify-center space-x-4 py-4">
-        <li>
-          <Link to="/" className="text-white">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/destination" className="text-white">
-            Destination
-          </Link>
-        </li>
-        <li>
-          <Link to="/booking" className="text-white">
-            Booking
-          </Link>
-        </li><li>
-          <Link to="/Ulasan" className="text-white">
-            Review
-          </Link>
-        </li>
-     
-      </ul>
-    </nav>
+    <header className="header">
+      <div className="logo">
+        <img src={logo} alt="Logo" /> {/* Gunakan variabel 'logo' sebagai src */}
+      </div>
+      <nav className="menu">
+        <ul>
+          <li><NavLink exact to="/" activeClassName="active">Home</NavLink></li>
+          <li><NavLink to="/Destination" activeClassName="active">Destination</NavLink></li>
+          <li><NavLink to="/Booking" activeClassName="active">Booking</NavLink></li>
+          <li><NavLink to="/Ulasan" activeClassName="active">Review</NavLink></li>
+        </ul>
+      </nav>
+    </header>
   );
-};
+}
 
-export default Navigation;
+export default Header;

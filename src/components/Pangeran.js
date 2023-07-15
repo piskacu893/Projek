@@ -38,14 +38,10 @@ const Curug1= () => {
     <img style={{width: 450, height: 300, left: 350, top: 97, position: 'absolute', borderRadius: 10}} src={Pangeran} alt="Gambar 2 - Curug Cilembu" />
  
   </div>
-  <div style={{width: 1440, height: 22, position: 'relative'}}>
-  <div style={{width: 1210, height: 200, left: 0, top: 916, position: 'absolute', background: '#166534', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', borderLeft: '0.50px black solid', borderTop: '0.50px black solid', borderRight: '0.50px black solid', borderBottom: '0.50px black solid'}} />
-  <div style={{width: 1000, height: 150, left: 135, top: 948, position: 'absolute', background: 'rgba(255, 255, 255, 0.49)', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', borderRadius: 10}} />
-  <div style={{left: 600, top: 950, position: 'absolute', color: '#FFFDFD', fontSize: 23, fontFamily: 'Poppins', fontStyle: 'italic', fontWeight: '600', wordWrap: 'break-word'}}>Copyright</div>
-  <div style={{left: 560, top: 1050, position: 'absolute', color: '#FFFDFD', fontSize: 28, fontFamily: 'Poppins', fontStyle: 'italic', fontWeight: '600', wordWrap: 'break-word'}}>Curug Indonesia</div>
-  <div style={{left: 530, top: 1009, position: 'absolute', color: '#FFFDFD', fontSize: 20, fontFamily: 'Poppins', fontStyle: 'italic', fontWeight: '600', wordWrap: 'break-word'}}>Bogor, Jawa Barat, Indonesia</div>
+  <div className="Group1" style={{width: 1200, height: 96, position: 'relative'}}>
+  <div className="Rectangle1" style={{width: 1264, height: 96, left: 0, top: 1019, position: 'absolute', background: '#008000', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}} />
+  <div className="2023YourCompanyAllRightsReserved" style={{left: 508, top: 1055, position: 'absolute', color: 'white', fontSize: 20, fontFamily: 'Poppins', fontStyle: 'italic', fontWeight: '600', wordWrap: 'break-word'}}>© 2023  Trip Plan. All rights reserved</div>
 </div>
-
   
 </div>
   );

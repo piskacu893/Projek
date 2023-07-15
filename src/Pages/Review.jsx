@@ -5,7 +5,7 @@ const Review = () => {
     return(
         <div>
             <Ulasan />
-            <Footer />
+           
         </div>
     )
 }

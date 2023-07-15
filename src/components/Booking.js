@@ -1,96 +1,106 @@
-// src/components/About.js
-
 import React, { useState } from 'react';
-import Styles from "../components/boking.css";
-const Booking = () => {
+import './boking.css';
+
+
+const BookingForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submittedName, setSubmittedName] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent form submission
-
-    // Display a thank you message
-    setIsSubmitted(true);
-
-    // Reset the form
-    setName('');
-    setEmail('');
-    setDate('');
-    setTime('');
+    e.preventDefault();
+    // Here you can handle form submission logic
+    setSubmittedName(name); // Save the submitted name
+    console.log('Form submitted!');
   };
 
   return (
-    <div className="overlay" style={{ backgroundImage: 'url("path/img/istockphoto-160238476-612x612.jpg")' }}>
-      <div className="container mx-auto max-w-md p-4 bg-white rounded-lg shadow-lg">
-        <h1 className="text-2xl font-bold mb-4">Booking Form</h1>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label htmlFor="name" className="block mb-2 font-bold">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-              className="w-full p-2 border border-gray-300 rounded"
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="email" className="block mb-2 font-bold">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="w-full p-2 border border-gray-300 rounded"
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="date" className="block mb-2 font-bold">Date:</label>
-            <input
-              type="date"
-              id="date"
-              name="date"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-              required
-              className="w-full p-2 border border-gray-300 rounded"
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="time" className="block mb-2 font-bold">Time:</label>
-            <select
-              id="time"
-              name="time"
-              value={time}
-              onChange={(e) => setTime(e.target.value)}
-              required
-              className="w-full p-2 border border-gray-300 rounded"
+    <div className="booking-form" >
+      <form className="form" onSubmit={handleSubmit}>
+        <h2 className="form-heading">Book Now</h2>
+        <div className="form-group">
+          <label htmlFor="name" className="form-label">
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            className="form-input"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email" className="form-label">
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            className="form-input"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="date" className="form-label">
+            Date
+          </label>
+          <input
+            type="date"
+            id="date"
+            className="form-input"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="time" className="form-label">
+            Time
+          </label>
+          <select
+            id="time"
+            className="form-input"
+            value={time}
+            onChange={(e) => setTime(e.target.value)}
+          >
+            <option value="">Select a time</option>
+            <option value="morning">Morning</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="evening">Evening</option>
+          </select>
+        </div>
+        <button
+              style={{
+                width: 100,
+                height: 35,
+                left: 27,
+                top: 420,
+                position: "absolute",
+                color: "white",
+                fontSize: 14,
+                fontFamily: "Poppins",
+                fontWeight: "40",
+                wordWrap: "break-word",
+                background: "#4CAF50",
+                borderRadius: 30,
+              }}
             >
-              <option value="">Select a time</option>
-              <option value="morning">Morning</option>
-              <option value="afternoon">Afternoon</option>
-              <option value="evening">Evening</option>
-            </select>
-          </div>
-          <div className="mb-4">
-            <input type="submit" value="Book Now" className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 cursor-pointer" />
-          </div>
-        </form>
-        {isSubmitted && (
-          <p className="message">
-            Thank you, {name}! Your booking has been confirmed.
-          </p>
-        )}
-      </div>
+              Book Now
+            </button>
+      </form>
+      
+      {submittedName && <p className="submitted-name">Thank you, {submittedName}, for your submission!</p>}
+
+      <div className="Group1" style={{width: 100, height: 90, position: 'absolute'}}>
+  <div className="Rectangle1" style={{width: 1260, height: 99, left: -582, top: 349, position: 'absolute', background: '#008000', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}} />
+  <div className="2023TripPlanAllRightsReserved " style={{width: 400, height: 9,left: -100, top: 386, position: 'relative', color: 'white', fontSize: 20, fontFamily: 'Poppins', fontStyle: 'italic', fontWeight: '600', wordWrap: 'break-word'}}>© 2023  Trip Plan. All rights reserved</div>
+</div>
     </div>
+    
   );
 };
 
-export default Booking;
+export default BookingForm;

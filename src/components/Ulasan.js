@@ -12,7 +12,7 @@ const Ulasan = () => {
     <div className="review-page">
       
       <header>
-        <h1>Review</h1>
+        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
       </header>
       <p style={{width: 280, height: 300, left: 200, top: 470, position: 'absolute', borderRadius: 10}}>Curug Leuwi Hejo</p>
@@ -26,7 +26,7 @@ const Ulasan = () => {
         <div className="box-container">
           <div className="box-1">
             <figure>
-              <img style={{width: 280, height: 300, left: 135, top: 150, position: 'absolute', borderRadius: 10}} src={leuwiHejo} alt="Gambar 1 - Curug Leuwi Hejo" />
+              <img style={{width: 280, height: 300, left: 139, top: 140, position: 'absolute', borderRadius: 10}} src={leuwiHejo} alt="Gambar 1 - Curug Leuwi Hejo" />
           
             
             </figure>
@@ -34,14 +34,14 @@ const Ulasan = () => {
 
           <div className="box-2">
             <figure>
-              <img style={{width: 280, height: 300, left: 467, top: 150, position: 'absolute', borderRadius: 10}} src={cilembu} alt="Gambar 2 - Curug Cilembu" />
+              <img style={{width: 280, height: 300, left: 490, top: 140, position: 'absolute', borderRadius: 10}} src={cilembu} alt="Gambar 2 - Curug Cilembu" />
               <figcaption>Gambar 2 - Curug Cilembu</figcaption>
             </figure>
           </div>
 
           <div className="box-3">
             <figure>
-              <img style={{width: 280, height: 300, left: 797, top: 150, position: 'absolute', borderRadius: 10}} src={pangeran} alt="Gambar 3 - Curug Pangeran" />
+              <img style={{width: 280, height: 300, left: 844, top: 140, position: 'absolute', borderRadius: 10}} src={pangeran} alt="Gambar 3 - Curug Pangeran" />
               <figcaption>Gambar 3 - Curug Pangeran</figcaption>
             </figure>
           </div>
@@ -97,6 +97,11 @@ const Ulasan = () => {
           </div>
         </div>
       </div>
+      <div className="Group1" style={{width: 1200, height: 96, position: 'relative'}}>
+  <div className="Rectangle1" style={{width: 1264, height: 96, left: 0, top: 175, position: 'absolute', background: '#008000', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}} />
+  <div className="2023YourCompanyAllRightsReserved" style={{left: 508, top: 213, position: 'absolute', color: 'white', fontSize: 20, fontFamily: 'Poppins', fontStyle: 'italic', fontWeight: '600', wordWrap: 'break-word'}}>© 2023  Trip Plan. All rights reserved</div>
+</div>
+    
     </div>
   );
 };

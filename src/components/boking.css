@@ -1,76 +1,68 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-
-.container {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 0.5);
+.booking-form {
+  background-image: url('../img/pexels-future-kiiid-3653963.jpg');
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background-position: absolute;
+  background-top: 0;
+  background-left: 0;
+  background-width: 100%;
+  background-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+
 }
 
-h1 {
-  text-align: center;
-  color: #333;
+.form {
+  position: absolute;
+  z-index: 1;
+  width: 410px;
+  height:469px;
+  left: 400px;
+  background-color: rgba(255,255,255,0.8);
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
-form {
-  margin-top: 30px;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
+.form-heading {
+  font-size: 24px;
   font-weight: bold;
-  color: #555;
+  margin-left: 110px;
+  margin-bottom: 20px;
+  justify-content: center;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="date"],
-select {
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-input {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.submitted-name {
+  margin-top: 540px;
+ margin-left: -40px;
+  font-weight: bold;
+  color: 		#FF0000;
+}
+
+.form-input select {
+  width: 10%;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #333;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-input[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover {
-  background-color: #45a049;
-}
-
-.message {
-  text-align: center;
-  margin-top: 20px;
-  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }

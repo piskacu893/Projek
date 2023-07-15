@@ -1,83 +1,76 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import cilembu from "../img/istockphoto-160238476-612x612.jpg";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+import Putri from "../img/hamzah-hanafi-EjaM2vz4Rdc-unsplash.jpg";
+import Kencana from "../img/mourizal-zativa-PVNFI44jCmY-unsplash (1).jpg";
+import Curug1 from "../img/bagus-ghufron-zE1PZSdHmvg-unsplash.jpg";
+import Curug2 from "../img/rafael-atantya-JwtTQaHl5Kw-unsplash.jpg";
+import "../components/home.css";
 
 const Home = () => {
   return (
     <div>
-      <div
-        style={{
-          width: 1210,
-          height: 490,
-          position: "relative",
-          background: "#EAE8E6",
-        }}
-      >
-        <img
-          style={{
-            width: 1210,
-            height: 570,
-            left: 0,
-            top: 0,
-            position: "absolute",
-            borderRadius: 10,
-          }}
-          src={cilembu}
-          alt="Gambar 2 - Curug Cilembu"
-        />
-
-        <div
-          style={{
-            left: 67,
-            top: 250,
-            position: "absolute",
-            color: "#DCD89E",
-            fontSize: 25,
-            fontFamily: "Gafata",
-            fontWeight: "400",
-            wordWrap: "break-word",
-          }}
+      <div className="carousel-container">
+        <Carousel
+          autoPlay={true}
+          infiniteLoop={true}
+          showStatus={false}
+          showThumbs={false}
         >
-          Look with open eyes and you will see
-          <br />
-          the beauty of the waterfall
-        </div>
-        <div
-          style={{
-            left: 64,
-            top: 330,
-            position: "absolute",
-            color: "#EAE8E6",
-            fontSize: 15,
-            fontFamily: "Gafata",
-            fontWeight: "400",
-            wordWrap: "break-word",
-          }}
-        >
-          Anthony Hincks
-        </div>
+          
+          <div>
+            <img
+              className="carousel-image"
+              src={Putri}
+              alt="Waterfall"
+            />
+           
+            
+          </div>
+          <div>
+            <img
+              className="carousel-image"
+              src={Kencana}
+              alt="Forest"
+            />
+            
+          </div>
+          <div>
+            <img
+              className="carousel-image"
+              src={Curug1}
+              alt="Waterfall"
+            />
+           
+            
+          </div>
+          <div>
+            <img
+              className="carousel-image"
+              src={Curug2}
+              alt="Waterfall"
+            />
+           
+            
+          </div>
+        </Carousel>
         
         <Link to="/Destination">
-          <button
-            style={{
-              width: 120,
-              height: 40,
-              left: 70,
-              top: 400,
-              position: "absolute",
-              color: "white",
-              fontSize: 16,
-              fontFamily: "Poppins",
-              fontWeight: "40",
-              wordWrap: "break-word",
-              background: "#4CAF50",
-              borderRadius: 30,
-            }}
-          >
-            Explore Now
-          </button>
+          <button className="explore-button">Explore Now</button>
         </Link>
       </div>
+      <div className="carousel-text">
+              <h1 className="carousel-title">Look with open eyes and you will see the beauty of the waterfall</h1>
+            
+              <p className="carousel-author">Anthony Hincks</p>
+            </div>
+
+            <div className="Group1" style={{width: 1200, height: 96, position: 'relative'}}>
+  <div className="Rectangle1" style={{width: 1264, height: 96, left: 0, top: 842, position: 'absolute', background: '#008000', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}} />
+  <div className="2023YourCompanyAllRightsReserved" style={{left: 508, top: 880, position: 'absolute', color: 'white', fontSize: 20, fontFamily: 'Poppins', fontStyle: 'italic', fontWeight: '600', wordWrap: 'break-word'}}>© 2023  Trip Plan. All rights reserved</div>
+</div>
     </div>
   );
 };

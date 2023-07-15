@@ -1,0 +1,63 @@
+.carousel-container {
+    width: 1264px;
+    left: 1000px;
+    height: 0px;
+    position: fix;
+    background: #EAE8E6;
+  }
+  
+  .carousel-image {
+    width: 70%;
+    height: 10%;
+    object-fit: cover;
+    border-radius: 0px;
+    image-rendering: auto; /* atau smooth */
+  }
+  
+  
+  .carousel-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #DAA520;
+    font-size: 30px;
+    font-family: "Gafata";
+    font-weight: 400;
+  }
+  
+  .carousel-title {
+    margin-bottom: 10px;
+  }
+  
+  .carousel-description {
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #EAE8E6;
+    font-family: "Gafata";
+    font-weight: 400;
+  }
+  
+  .carousel-author {
+    color: #EAE8E6;
+    font-size: 17px;
+    font-family: "Gafata";
+    font-weight: 00;
+    left: 70px;
+  }
+  
+  .explore-button {
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    top: 470px;
+    left: 575px;
+    color: white;
+    font-size: 16px;
+    font-family: "Poppins";
+    font-weight: 40;
+    background: #4CAF50;
+    border-radius: 30px;
+  }
+  
